@@ -1,6 +1,6 @@
 configuration {
 	modes: "window,drun,run,ssh,combi";
-	font: "Terminus 12";
+	font: "Terminus 18";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -152,7 +152,7 @@ configuration {
 }
 
 * {
-    bg: #263238;
+    bg: #1f2aa3;
     fg: #FFFFFF;
     accent: #82AAFF;
     transparent-bg: #263238CC; /* #263238 with 80% opacity */
@@ -164,17 +164,17 @@ prompt {
 
 entry {
 	text-color: white;
-	background-color: rgb(0, 97, 33);
+	background-color: rgb(31, 42, 163);
 	placeholder: "";
 }
 
 entry, element-text {
   	text-color: white;
-  	background-color: rgb(0,67,63);
+  	background-color: rgb(31,42,163);
 
 }
 
 window {
 	text-color:white;
-	background-color: rgb(0, 33, 12);
+	background-color: rgb(17, 22, 70);
 }

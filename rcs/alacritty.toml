@@ -3,7 +3,7 @@
 
 [font]
 	normal = { family = "Terminus", style = "Regular" }
-	size = 6
+	size = 12
 
 [colors.primary]
 	background = "#090815"

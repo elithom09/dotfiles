@@ -1,26 +1,23 @@
 #!/bin/sh
 
-
-#thinkpad only
-synclient RightButtonAreaLeft=0
-synclient RightButtonAreaRight=0
-synclient RightButtonAreaTop=0
-synclient VertScrollDelta=-100
-synclient HorizScrollDelta=-100
-synclient AccelFactor=0.18
-synclient MinSpeed=0.5
-synclient MaxSpeed=2
-xinput set-prop "ELAN Touchscreen" "Device Enabled" 0
+xrdb -merge /home/eli/.Xresources
 
 export MOZ_USE_XINPUT2=1
 
-
-#desktop only
-#sudo nfan &
-
-feh --bg-fill /home/eli/Pictures/nature/$(dir -1 /home/eli/Pictures/nature | shuf -n 1)
+feh --bg-tile /home/eli/Pictures/bluecircuit.png
 
 dunst &
 picom &
+
+xinput set-prop 12 "libinput Accel Speed" 0.22
+xinput set-prop 12 "libinput Natural Scrolling Enabled" 1
+xinput set-prop 12 "libinput Click Method Enabled" {1, 1}
+xinput set-prop 12 "libinput Disable While Typing Enabled" 0
+
+.dwm/autostart.sh &
+
+pactl load-module module-switch-on-connect
+
+xrandr --output eDP --gamma 1.22:1.22:1.22
 
 exec dbus-run-session -- dwm

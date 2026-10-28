@@ -68,4 +68,4 @@ if executable('asm-lsp')
         \ })
 endif
 
-colorscheme catppuccin_mocha
+colorscheme moonfly
